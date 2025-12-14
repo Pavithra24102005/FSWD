@@ -166,3 +166,133 @@ export default function StudentEnrollmentForm() {
     </div>
   );
 }
+
+
+CSS
+.page-bg {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* vertical + horizontal center */
+  padding: 40px 20px;    /* allows scroll when tall */
+  box-sizing: border-box;
+}
+
+/* Wrapper */
+.center-wrapper {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;         /* CENTERING FIX */
+  display: flex;
+  justify-content: center;
+}
+
+/* Form card */
+.form-box {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;         /* EXTRA CENTERING FIX */
+}
+
+/* Mobile fix for long forms */
+@media (max-width: 600px) {
+  .page-bg {
+    align-items: flex-start;   /* allows full scroll */
+    padding-top: 25px;
+  }
+
+  .form-box {
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+/* Heading */
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+.grp {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.grp label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.inline label {
+  margin-right: 12px;
+}
+
+input,
+select,
+textarea {
+  padding: 9px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.dual {
+  display: flex;
+  gap: 12px;
+}
+
+.dual > div {
+  flex: 1;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #1f74c9;
+  color: white;
+}
+
+.actions button:nth-child(2) {
+  background: #c44141;
+}
+
+.actions button:hover {
+  opacity: 0.85;
+}
+
+/* Output box */
+.output {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 20px;
+  border-radius: 10px;
+}
